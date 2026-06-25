@@ -1,0 +1,182 @@
+/* ───────── RESET ───────── */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ───────── BASE ───────── */
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background:linear-gradient(140deg, black, blue, rgb(67, 112, 127), white);;
+    color: #2c3e50;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    line-height: 1.5;
+}
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: Black;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+/* ───────── PRODUCTOS ───────── */
+ .contenedor{
+    width:100%;
+    padding:30px;
+    background:linear-gradient(135deg purple, blue, pink);
+    border-radius:20px;
+    color:white;
+    backdrop-filter:blur(10px);
+}
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.productos article {
+    background: white;
+    border-radius: 14px;
+    padding: 1.2rem;
+    border: 1px solid #dbe7f3;
+    box-shadow: 0 2px 8px rgba(0,0,0,.05);
+    transition: all .3s ease;
+}
+
+.productos article:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px red;
+}
+
+.productos p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.productos .precio {
+    display: block;
+    margin-top: .5rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #2563eb;
+}
+.productos img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+/* ───────── BOTÓN AGREGAR ───────── */
+.productos button {
+    width: 100%;
+    padding: .8rem;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.productos button:hover {
+    background: #1d4ed8;
+    box-shadow: 1px solid red;
+}
+
+.productos button:active {
+    transform: scale(.98);
+}
+
+/* ───────── CARRITO ───────── */
+
+.carrito {
+    background: white;
+    border-radius: 14px;
+    padding: 1.5rem;
+    border: 1px solid #dbe7f3;
+    box-shadow: 0 2px 8px rgba(0,0,0,.05);
+    margin-bottom: 1rem;
+}
+
+.carrito div {
+    padding: .8rem 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.carrito div:last-child {
+    border-bottom: none;
+}
+
+.carrito p {
+    margin-bottom: .5rem;
+    font-size: .95rem;
+}
+
+/* ───────── BOTONES DEL CARRITO ───────── */
+
+.carrito button {
+    padding: .45rem .8rem;
+    margin-right: .3rem;
+    border: none;
+    border-radius: 6px;
+    background: #f3f4f6;
+    color: #374151;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.carrito button:hover {
+    background: #dbeafe;
+    box-shadow: 0 2px 8px solid red;
+}
+
+/* ───────── TOTAL ───────── */
+
+.totalCarrito {
+    background: white;
+    border: 1px solid #dbe7f3;
+    border-radius: 14px;
+    padding: 1rem 1.5rem;
+    text-align: right;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #2563eb;
+    box-shadow: 0 2px 8px red;
+}
+
+/* ───────── RESPONSIVE ───────── */
+
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    .productos {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+    }
+}
